@@ -21,7 +21,7 @@ const styleSheet = {
 };
 
 const IntroScreen = props => {
-  useEffect() => {
+  useEffect(() => {
     async function getName() {
       const temp = await AsyncStorage.getItem('name');
       setName(temp);
@@ -29,7 +29,7 @@ const IntroScreen = props => {
     getName();
   }, []);
 
-  useEffect() => {
+  useEffect(() => {
     setTimeout(() => {
       props.navigation.navigate('App');
     }, 5000);
@@ -38,8 +38,8 @@ const IntroScreen = props => {
   const [name, setName] = useState('');
 
   return(
-    <View style-{styleSheet.container}>
-    <Text style-{styleSheet.nameStyle}>{name}</Text>
+    <View style={styleSheet.container}>
+      <Text style={styleSheet.nameStyle}>{name}</Text>
     </View>
   );
 }
