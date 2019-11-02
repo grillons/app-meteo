@@ -38,7 +38,7 @@ const {dispatch, navigation } = props;
 
 return(
   <View style={styleSheet.container}>
-    <Text style={}></Text>
+    <Text style={styleSheet.label}>Prénom</Text>
     <TextInput
       style={styleSheet.input}
       onChangeText={(text) => setName(text)}
