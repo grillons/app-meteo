@@ -6,7 +6,7 @@ const { width } = Dimensions.get('window');
 
 const styleSheet = {
     container: {
-      width: `${width}px`,
+      //width: `${width}px`, //avoid "JSON value '414px' of type NSString cannot be converted to a ABI35_0_0YGValue" error
       flex: 1,
       flexDirection: 'column',
       justifyContent: 'center',
