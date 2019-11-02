@@ -1,6 +1,4 @@
-// TODO : better code to these global var
-const baseUrl = '';
-const apiKey = '';
+const baseUrl = 'http://api.openweathermap.org/data/2.5/';
 
 // requestGet est exportée, donc utilisable dans d'autres fichiers
 // Params
@@ -12,7 +10,8 @@ export function requestGet(endPoint, query = '') {
     'Content-Type': 'application/json',
   };
 
-  endPoint = `${endPoint}?${query}&APPID=${apiKey}`;
+  query     = 'weather?q=Valence,fr';
+  endPoint  = `${endPoint}?${query}&APPID=${process.env.REACT_APP_OPEN_WEATHER_API_KEY}`;
 
   return fetch(baseUrl + endPoint, {
     method: 'GET',
